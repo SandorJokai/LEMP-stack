@@ -86,4 +86,4 @@ This is not exactly the way of DevOps. There are more segments of that which are
 ![npm package](https://img.shields.io/badge/php_fpm-7.4.3-blue.svg)
 ![npm package](https://img.shields.io/badge/mysql-8.0.25-orange.svg)
 ![npm package](https://img.shields.io/badge/ubuntu-20.04.2-purple.svg)
-![npm package](https://img.shields.io/badge/amazon_aws-lightorange.svg)
+![npm package](https://img.shields.io/badge/amazon_aws-yellow.svg)
