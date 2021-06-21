@@ -24,6 +24,10 @@ Don't forget to modify the file permissions of .csr, .key and .crt!
 
 Create virtual hosts (*sudo vi /etc/nginx/sites-avaialble/virthost-1*) to test how it can be reached the different contents via url, just like if we would have used more servers.
 To do so, the most easiest way is just copy the default configfile and modify it (*server_name, root...*), uncomment line if necessary.
+Create an index file as well in /var/www and put some codes:
+
+$ sudo vi /var/www/virthost-1
+
 Don't forget to reboot the nginx to update the modifications.
 
 <h3>Make the server more interactive...</h3>
