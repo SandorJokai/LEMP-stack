@@ -41,8 +41,6 @@ Once we make sure the php working properly, delete this file immediately, becaus
 
 We only need to install the mysql server. After that, warmly recommended to make some security settings using of mysql_secure_installation.
 $ sudo mysql_secure_installation
-import chalk from 'chalk';
-
-console.log(chalk.blue('Hello world!'));
+		git commit -am "By typing this command I am saving a collection of saved files."
 
 For example, create a root password (*which is not the same in mysql as in the server environment*), remove anonymous users, disallow root login remotely, etc.
