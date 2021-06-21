@@ -15,7 +15,7 @@ The infrastructure built in cloud provided by Amazon Web Services.
 
 <h2>Create servers</h2>
 
-Create 2 servers on EC2, choose ubuntu 20.04LTS. Once the servers installed, connect to via ssh connection. (*The key must be installed on host computer at the last stage of installation process*)
+Create 2 servers on EC2, choose 20.04LTS. Once the servers installed, connect to via ssh connection. (*The key must be installed on host computer at the last stage of installation process*)
 
 Because this is a newly installed server, we need to update the packages. After that, install nginx.
 For testing purposes, warmly recommended to use a self-signed certificate for using SSL connection rather than http in URL.
@@ -81,3 +81,9 @@ This is not exactly the way of DevOps. There are more segments of that which are
   Regarding Amazon instances...when we no longer need to use the servers, stop it immediately to save hours and usage of free tier.
   Amazon is one of the most expensive cloud provider and the most popular in the same time.
  
+
+![npm package](https://img.shields.io/badge/nginx-1.18.0-brightgreen.svg)
+![npm package](https://img.shields.io/badge/php_fpm-7.4.3-blue.svg)
+![npm package](https://img.shields.io/badge/mysql-8.0.25-orange.svg)
+![npm package](https://img.shields.io/badge/ubuntu-20.04.2-purple.svg)
+![npm package](https://img.shields.io/badge/amazon_aws-lightorange.svg)
