@@ -83,6 +83,12 @@ Once we logged in, we can see it works.
 mysql> exit
   
 Finally, create a php file in /var/www to make it works after all we created.
+
+Don't forget to create a symlink to the newly created configfile:
+
+$ sudo ln -s /etc/nginx/sites-available/DB-query.php /etc/nginx/sites-enabled/
+
+$ sudo systemctl restart nginx
   
 <h1>Epilogue</h1>
   
