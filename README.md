@@ -44,3 +44,7 @@ We only need to install the mysql server. After that, warmly recommended to make
 $ sudo mysql_secure_installation
 
 For example, create a root password (*which is not the same in mysql as in the server environment*), remove anonymous users, disallow root login remotely, etc.
+
+Once we done that, let's do some nice things in mysql:
+
+![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
