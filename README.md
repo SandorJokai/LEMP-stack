@@ -8,6 +8,12 @@ The infrastructure built in cloud provided by Amazon Web Services.
 
 <h1>Pre-requisites</h1>
 
+- need to have an AWS account
 - need to be able to use bash shell confidently
-- must to know how to config an nginx virtualhost
+- must know how to config an nginx virtualhost
 - basic knowledge of mysql (Structured Query Language)
+
+<h2>Create servers</h2>
+
+Create 2 servers on EC2, choose ubuntu 20.04LTS. Once the servers installed, connect to via ssh connection. (*The key must be installed on host computer at the last stage of installation process*)
+
