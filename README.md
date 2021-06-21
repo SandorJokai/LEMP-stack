@@ -15,8 +15,9 @@ The infrastructure built in cloud provided by Amazon Web Services.
 
 <h2>Create servers</h2>
 
-Create 2 servers on EC2, choose ubuntu 20.04LTS. Once the servers installed, connect to via ssh connection. (*The key must be installed on host computer at the last stage of installation process*)
+<html>Create 2 servers on EC2, choose ubuntu 20.04LTS. Once the servers installed, connect to via ssh connection. (*The key must be installed on host computer at the last stage of installation process*)
 
 Because this is a newly installed server, we need to update the packages. After that, install nginx.
 For testing purposes, warmly recommended to use a self-signed certificate for using SSL connection rather than http in URL.
 \nDon't forget to modify the file permissions of .csr, .key and .crt!
+</html>
