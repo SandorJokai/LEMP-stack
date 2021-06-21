@@ -15,7 +15,7 @@ The infrastructure built in cloud provided by Amazon Web Services.
 
 <h2>Create servers</h2>
 
-Create 2 servers on EC2, choose ubuntu 20.04LTS. Once the servers installed, connect to via ssh connection. (*The key must be installed on host computer at the last stage of installation process*)
+Create 2 servers on EC2, choose 20.04LTS. Once the servers installed, connect to via ssh connection. (*The key must be installed on host computer at the last stage of installation process*)
 
 Because this is a newly installed server, we need to update the packages. After that, install nginx.
 For testing purposes, warmly recommended to use a self-signed certificate for using SSL connection rather than http in URL.
@@ -24,7 +24,17 @@ Don't forget to modify the file permissions of .csr, .key and .crt!
 
 Create virtual hosts (*sudo vi /etc/nginx/sites-avaialble/virthost-1*) to test how it can be reached the different contents via url, just like if we would have used more servers.
 To do so, the most easiest way is just copy the default configfile and modify it (*server_name, root...*), uncomment line if necessary.
+
+In order to make our life easier, let's change the root of all sites (*virtualhosts including the default page*) from the default /var/www/html to /var/www/.
+Besides, it is very important to give same names all the index files as in their config server_name
+
+So let's create an index file in /var/www and put some codes:
+
+$ sudo vi /var/www/aws-example.html
+
 Don't forget to reboot the nginx to update the modifications.
+
+For testing how works, just click on (*public ip dns --> open address*) in aws EC2 dashboard. We should see a notice first, because we have self-signed certificate, just click okay.
 
 <h3>Make the server more interactive...</h3>
 Once we have done the previous steps, we also need to install some php modules with the php itself.
@@ -47,7 +57,8 @@ For example, create a root password (*which is not the same in mysql as in the s
 
 Once we done that, let's do some nice things in mysql:
 
-![Image of mysql](https://github-pictures.s3.amazonaws.com/mysql.png)
+<!--- ![Image of mysql](https://github-pictures.s3.amazonaws.com/mysql.png) -->
+![Image of mysql](https://github.com/SandorJokai/LEMP-stack/blob/master/mysql.png)
 
 In order to be reachable our newly configured mysql server, we need a bit to modify the main mysql config:
 
@@ -58,3 +69,41 @@ change the bind-address to 0.0.0.0
 $ sudo systemctl restart mysql
 
 That is it, nearly there. :)
+
+<h2>Let's jump back to the nginx server</h2>
+
+In order to make connection with the remote mysql server, we need to install a client version of mysql:
+
+$ sudo apt install mysql-client
+
+$ mysql -u test_user -h "mysql-server-ip" -p
+  
+Once we logged in, we can see it works.
+  
+mysql> exit
+  
+Finally, create a php file in /var/www to make it works after all we created.
+
+Don't forget to create a symlink to the newly created configfile:
+
+$ sudo ln -s /etc/nginx/sites-available/bands /etc/nginx/sites-enabled/
+
+$ sudo vi /var/www/bands.php 
+
+(*add a php section here which will be connected first and then make a query and finally close the connection with the remote DB*)
+
+$ sudo systemctl restart nginx
+  
+<h1>Epilogue</h1>
+  
+This is not exactly the way of DevOps. There are more segments of that which are missing. The only aim of this presentation is to show how can we able to set up servers and make them work together in quite a short time. 
+
+  Regarding Amazon instances...when we no longer need to use the servers, stop it immediately to save hours and usage of free tier.
+  Amazon is one of the most expensive cloud provider and the most popular in the same time.
+ 
+
+![npm package](https://img.shields.io/badge/nginx-1.18.0-brightgreen.svg)
+![npm package](https://img.shields.io/badge/php_fpm-7.4.3-blue.svg)
+![npm package](https://img.shields.io/badge/mysql-8.0.25-orange.svg)
+![npm package](https://img.shields.io/badge/ubuntu-20.04.2-purple.svg)
+![npm package](https://img.shields.io/badge/amazon-aws-yellow.svg)
