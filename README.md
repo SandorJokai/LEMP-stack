@@ -22,3 +22,4 @@ For testing purposes, warmly recommended to use a self-signed certificate for us
 
 Don't forget to modify the file permissions of .csr, .key and .crt!
 
+Create virtual hosts (*sudo vi /etc/nginx/sites-avaialble/virthost-1*) to test how it can be reached the different contents via url, just like if we would have used more servers.
