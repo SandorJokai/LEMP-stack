@@ -59,3 +59,25 @@ change the bind-address to 0.0.0.0
 $ sudo systemctl restart mysql
 
 That is it, nearly there. :)
+
+<h2>Let's jump back to the nginx server</h2>
+
+In order to make connection with the remote mysql server, we need to install a client version of mysql:
+
+$ sudo apt install mysql-client
+
+$ mysql -u test_user -h <mysql-server-ip> -p
+  
+Once we logged in, we can see it works.
+  
+mysql> exit
+  
+Finally, create a php file in /var/www to make it works after all we created.
+  
+<h1>Epilogue</h1>
+  
+This is not exactly the way of DevOps. There are more segments of that which are missing. The only aim of this presentation is to show how can we able to set up servers and make them work together in quite a short time. 
+
+  Regarding Amazon instances...when we no longer need to use the servers, stop it immediately to save hours and usage of free tier.
+  Amazon is one of the most expensive cloud provider and the most popular in the same time.
+ 
