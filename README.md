@@ -19,4 +19,4 @@ Create 2 servers on EC2, choose ubuntu 20.04LTS. Once the servers installed, con
 
 Because this is a newly installed server, we need to update the packages. After that, install nginx.
 For testing purposes, warmly recommended to use a self-signed certificate for using SSL connection rather than http in URL.
-Don't forget to modify the file permissions of .csr, .key and .crt !
+\nDon't forget to modify the file permissions of .csr, .key and .crt!
