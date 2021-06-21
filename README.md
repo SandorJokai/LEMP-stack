@@ -88,7 +88,8 @@ Don't forget to create a symlink to the newly created configfile:
 
 $ sudo ln -s /etc/nginx/sites-available/DB-query /etc/nginx/sites-enabled/
 
-$ sudo vi /var/www/DB-query.php (*Add a php section here which will be connected first and then make a query and finally close the connection with the remote DB *)
+$ sudo vi /var/www/DB-query.php (*Add a php section here which will be connected first 
+and then make a query and finally close the connection with the remote DB *)
 
 $ sudo systemctl restart nginx
   
