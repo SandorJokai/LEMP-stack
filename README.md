@@ -26,7 +26,7 @@ Create virtual hosts (*sudo vi /etc/nginx/sites-avaialble/virthost-1*) to test h
 To do so, the most easiest way is just copy the default configfile and modify it (*server_name, root...*), uncomment line if necessary.
 Don't forget to reboot the nginx to update the modifications.
 
-<h2>Make the server more interactive...</h2>
+<h3>Make the server more interactive...</h3>
 Once we have done the previous steps, we also need to install some php modules with the php itself.
 The aim of doing that is to make connection with the mysql server behind the scenes, later on... :)
 
