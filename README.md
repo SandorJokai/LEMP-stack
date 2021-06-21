@@ -47,7 +47,7 @@ For example, create a root password (*which is not the same in mysql as in the s
 
 Once we done that, let's do some nice things in mysql:
 
-<![Image of mysql](https://github-pictures.s3.amazonaws.com/mysql.png)
+<! ![Image of mysql](https://github-pictures.s3.amazonaws.com/mysql.png)
 
 In order to be reachable our newly configured mysql server, we need a bit to modify the main mysql config:
 
