@@ -30,7 +30,7 @@ Besides, it is very important to give same names all the index files as in their
 
 So let's create an index file in /var/www and put some codes:
 
-$ sudo vi /var/www/virthost-1
+$ sudo vi /var/www/virthost-1.html
 
 Don't forget to reboot the nginx to update the modifications.
 
