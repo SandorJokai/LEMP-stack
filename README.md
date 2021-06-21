@@ -25,7 +25,7 @@ Don't forget to modify the file permissions of .csr, .key and .crt!
 Create virtual hosts (*sudo vi /etc/nginx/sites-avaialble/virthost-1*) to test how it can be reached the different contents via url, just like if we would have used more servers.
 To do so, the most easiest way is just copy the default configfile and modify it (*server_name, root...*), uncomment line if necessary.
 
-In order to make our life easier, let's change the root of all sites (/*virtualhosts including the default page*/) from the default /var/www/html to /var/www/.
+In order to make our life easier, let's change the root of all sites (*virtualhosts including the default page*) from the default /var/www/html to /var/www/.
 Besides, it is very important to give same names all the index files as in their config server_name
 
 So let's create an index file in /var/www and put some codes:
