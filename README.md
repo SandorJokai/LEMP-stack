@@ -66,7 +66,7 @@ In order to make connection with the remote mysql server, we need to install a c
 
 $ sudo apt install mysql-client
 
-$ mysql -u test_user -h <mysql-server-ip> -p
+$ mysql -u test_user -h "mysql-server-ip" -p
   
 Once we logged in, we can see it works.
   
