@@ -25,3 +25,13 @@ Don't forget to modify the file permissions of .csr, .key and .crt!
 Create virtual hosts (*sudo vi /etc/nginx/sites-avaialble/virthost-1*) to test how it can be reached the different contents via url, just like if we would have used more servers.
 To do so, the most easiest way is just copy the default configfile and modify it (*server_name, root...*), uncomment line if necessary.
 Don't forget to reboot the nginx to update the modifications.
+
+<h2>Make the server more interactive...</h2>
+Once we have done the previous steps, we also need to install some php modules with the php itself.
+The aim of doing that is to make connection with the mysql server behind the scenes, later on... :)
+
+For testing how the php works, let's create our first php file:
+
+sudo vi info.php --> <?php phpinfo(); ?> --> Once we created, reboot the nginx and typing on the URL: https://<our-servername>/info.php
+  We should see a nice blue coloured lines with many of the lines. 
+(*those are parameters of the php BTW*) 
