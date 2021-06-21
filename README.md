@@ -28,9 +28,13 @@ To do so, the most easiest way is just copy the default configfile and modify it
 In order to make our life easier, let's change the root of all sites (*virtualhosts including the default page*) from the default /var/www/html to /var/www/.
 Besides, it is very important to give same names all the index files as in their config server_name
 
+Don't forget to create a symlink to the newly created configfile:
+
+$ sudo ln -s /etc/nginx/sites-available/virthost-1 /etc/nginx/sites-enabled/
+
 So let's create an index file in /var/www and put some codes:
 
-$ sudo vi /var/www/aws-example.html
+$ sudo vi /var/www/virthost-1.html
 
 Don't forget to reboot the nginx to update the modifications.
 
