@@ -13,7 +13,7 @@ server {
         ssl_certificate /etc/nginx/ssl/websrv.crt;
         ssl_certificate_key /etc/nginx/ssl/websrv.key;
 
-	server_name aws-example;
+	server_name virthost-1;
 
 	root /var/www/;
 	index index.html index.php;
