@@ -32,6 +32,6 @@ The aim of doing that is to make connection with the mysql server behind the sce
 
 For testing how the php works, let's create our first php file:
 
-sudo vi info.php --> php phpinfo(); ?> --> Once we created, reboot the nginx and typing on the URL: https://OUR-SERVERNAME/info.php
+sudo vi info.php --> php phpinfo(); ?> --> Once we created, reboot the nginx and typing on the URL: https://our-servername/info.php
 
 We should see a nice blue coloured lines with many of the lines. (*those are parameters of the php BTW*) 
