@@ -7,6 +7,6 @@ The aim of this repository is to show how to set up servers (one for nginx(front
 The infrastructure built in cloud provided by Amazon Web Services.
 
 <h1>Pre-requisites</h1>
-    - need to be able to use bash shell confidently
-    - must to know how to config an nginx virtualhost
-    - basic knowledge of mysql (Structured Query Language)
+- need to be able to use bash shell confidently
+-  must to know how to config an nginx virtualhost
+- basic knowledge of mysql (Structured Query Language)
