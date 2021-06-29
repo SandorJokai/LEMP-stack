@@ -32,11 +32,15 @@ Besides, it is very important to give same names all the index files as in their
 
 Don't forget to create a symlink to the newly created configfile:
 
-$ sudo ln -s /etc/nginx/sites-available/virthost-1 /etc/nginx/sites-enabled/
+```bash
+sudo ln -s /etc/nginx/sites-available/virthost-1 /etc/nginx/sites-enabled/
+```
 
 So let's create an index file in /var/www and put some codes:
 
-$ sudo vi /var/www/virthost-1.html
+```bash
+sudo vi /var/www/virthost-1.html
+```
 
 Don't forget to reboot the nginx to update the modifications.
 
@@ -57,7 +61,9 @@ Once we make sure the php working properly, delete this file immediately, becaus
 
 We only need to install the mysql server. After that, warmly recommended to make some security settings using of mysql_secure_installation:
 
-$ sudo mysql_secure_installation
+```bash
+sudo mysql_secure_installation
+```
 
 For example, create a root password (*which is not the same in mysql as in the server environment*), remove anonymous users, disallow root login remotely, etc.
 
@@ -68,11 +74,15 @@ Once we done that, let's do some nice things in mysql:
 
 In order to be reachable our newly configured mysql server, we need a bit to modify the main mysql config:
 
-$ sudo vi /etc/mysql/mysql.conf.d/mysqld.cnf
+```bash
+sudo vi /etc/mysql/mysql.conf.d/mysqld.cnf
+```
 
 change the bind-address to 0.0.0.0
 
-$ sudo systemctl restart mysql
+```bash
+sudo systemctl restart mysql
+```
 
 That is it, nearly there. :)
 
@@ -80,9 +90,13 @@ That is it, nearly there. :)
 
 In order to make connection with the remote mysql server, we need to install a client version of mysql:
 
-$ sudo apt install mysql-client
+```bash
+sudo apt install mysql-client
+```
 
-$ mysql -u test_user -h "mysql-server-ip" -p
+```bash
+mysql -u test_user -h "mysql-server-ip" -p
+```
   
 Once we logged in, we can see it works.
   
@@ -92,13 +106,19 @@ Finally, create a php file in /var/www to make it works after all we created.
 
 Don't forget to create a symlink to the newly created configfile:
 
-$ sudo ln -s /etc/nginx/sites-available/bands /etc/nginx/sites-enabled/
+```bash
+sudo ln -s /etc/nginx/sites-available/bands /etc/nginx/sites-enabled/
+```
 
-$ sudo vi /var/www/bands.php 
+```bash
+sudo vi /var/www/bands.php 
+```
 
 (*add a php section here which will be connected first and then make a query and finally close the connection with the remote DB*)
 
-$ sudo systemctl restart nginx
+```bash
+sudo systemctl restart nginx
+```
   
 <h1>Epilogue</h1>
   
